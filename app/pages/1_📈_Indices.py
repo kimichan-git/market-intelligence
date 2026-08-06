@@ -37,7 +37,8 @@ if market_df is not None:
         
     with col2:
         st.subheader("統計指標")
-        last_price = filtered_df[selected_ticker].iloc[-1]
+        # old: last_price = filtered_df[selected_ticker].iloc[-1]
+        last_price = filtered_df[selected_ticker].dropna().iloc[-1]
         period_return = (filtered_df[selected_ticker].iloc[-1] / filtered_df[selected_ticker].iloc[0] - 1) * 100
         
         st.metric("最新價格", f"{last_price:,.2f}")
