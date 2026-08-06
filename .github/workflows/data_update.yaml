@@ -2,18 +2,21 @@ name: Daily Market Data Update
 
 on:
   schedule:
-    - cron: '0 22 * * *' # 每天收盤後執行 (UTC 時間，約美股收盤)
+    - cron: '0 22 * * *' # 每天收盤後執行 (UTC 時間)
   workflow_dispatch: # 允許手動觸發
+
+permissions:
+  contents: write # 明確要求寫入權限
 
 jobs:
   update-data:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4 # 升級到 v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5 # 升級到 v5
         with:
           python-version: '3.10'
 
