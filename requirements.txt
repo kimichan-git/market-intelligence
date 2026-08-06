@@ -1,0 +1,10 @@
+yfinance
+fredapi
+pandas
+numpy
+plotly
+streamlit
+python-dotenv
+pytest
+pyarrow
+pyyaml

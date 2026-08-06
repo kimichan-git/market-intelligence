@@ -1,0 +1,35 @@
+indices:
+  - ticker: ^GSPC
+    name: S&P 500
+  - ticker: ^IXIC
+    name: NASDAQ Composite
+  - ticker: ^HSI
+    name: Hang Seng Index
+  - ticker: ^FTSE
+    name: FTSE 100
+  - ticker: ^N225
+    name: Nikkei 225
+
+forex:
+  - ticker: EURUSD=X
+    name: EUR/USD
+  - ticker: JPY=X
+    name: USD/JPY
+  - ticker: GBPUSD=X
+    name: GBP/USD
+  - ticker: CNH=X
+    name: USD/CNH
+
+commodities:
+  - ticker: GC=F
+    name: Gold Futures
+
+yield_curve:
+  - series_id: DGS2
+    name: US 2-Year Treasury Yield
+  - series_id: DGS5
+    name: US 5-Year Treasury Yield
+  - series_id: DGS10
+    name: US 10-Year Treasury Yield
+  - series_id: DGS30
+    name: US 30-Year Treasury Yield
